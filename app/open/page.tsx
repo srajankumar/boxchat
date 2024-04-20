@@ -83,9 +83,9 @@ export default function Page() {
       </div>
       <div className="flex flex-col gap-8 py-6 max-w-3xl mx-auto px-5 w-full">
         {loading ? (
-          <div>
+          <div className="flex flex-col gap-9">
             {[...Array(6)].map((_, index) => (
-              <div key={index} className="py-5 flex">
+              <div key={index} className="flex">
                 <Skeleton className="w-10 h-10 mr-2 rounded-full" />
                 <div>
                   <Skeleton className="w-40 h-5 mb-2" />

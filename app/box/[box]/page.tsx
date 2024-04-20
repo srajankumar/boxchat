@@ -24,6 +24,8 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 export default function Box({ params }: { params: { box: string } }) {
   const [notes, setNotes] = useState<any[] | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const supabase = createClient();
 
   useEffect(() => {
@@ -54,6 +56,7 @@ export default function Box({ params }: { params: { box: string } }) {
   }, []);
 
   async function clearTableData() {
+    setIsLoading(true);
     try {
       // Query all rows from the specified table
       const { data, error } = await supabase.from("box").select("id"); // assuming 'id' is the primary key column
@@ -68,7 +71,9 @@ export default function Box({ params }: { params: { box: string } }) {
       }
 
       window.location.href = "/";
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.error("Error clearing table data:", error);
     }
   }
@@ -134,12 +139,29 @@ export default function Box({ params }: { params: { box: string } }) {
                   {`Are you sure you want to delete the Box "${params.box}"? This
                   action cannot be undone.`}
                   <AlertDialogFooter className="flex flex-col">
-                    <AlertDialogAction
-                      className="bg-destructive hover:bg-destructive/90"
+                    <Button
+                      variant={"destructive"}
+                      disabled={isLoading}
                       onClick={clearTableData}
                     >
+                      {isLoading && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-2 h-4 w-4 animate-spin"
+                        >
+                          <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                        </svg>
+                      )}
                       Delete
-                    </AlertDialogAction>
+                    </Button>
                     <AlertDialogCancel>Cancel</AlertDialogCancel>
                   </AlertDialogFooter>
                 </AlertDialogContent>
@@ -158,9 +180,9 @@ export default function Box({ params }: { params: { box: string } }) {
       </div>
       <div className="flex flex-col gap-8 py-6 max-w-3xl mx-auto px-5 w-full">
         {loading ? (
-          <div>
+          <div className="flex flex-col gap-9">
             {[...Array(6)].map((_, index) => (
-              <div key={index} className="py-5 flex">
+              <div key={index} className="flex">
                 <Skeleton className="w-10 h-10 mr-2 rounded-full" />
                 <div>
                   <Skeleton className="w-40 h-5 mb-2" />
