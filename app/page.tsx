@@ -40,7 +40,6 @@ export default function Home() {
         <Link href="/open">
           <Button className="w-full">Join Open Box</Button>
         </Link>
-        {/* <Button>Create a Box</Button> */}
         <AlertDialog>
           <AlertDialogTrigger className="bg-primary py-2 text-primary-foreground shadow hover:bg-primary/90 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
             Create / Join a Box
@@ -57,11 +56,11 @@ export default function Home() {
                 placeholder="Enter box name"
               />
             </form>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogFooter className="flex flex-col">
               <AlertDialogAction onClick={handleRedirect}>
                 Join
               </AlertDialogAction>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>

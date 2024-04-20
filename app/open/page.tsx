@@ -81,7 +81,7 @@ export default function Page() {
         <NewNote />
         <Navbar />
       </div>
-      <div className="flex flex-col gap-2 max-w-3xl mx-auto px-5 w-full">
+      <div className="flex flex-col gap-8 py-6 max-w-3xl mx-auto px-5 w-full">
         {loading ? (
           <div>
             {[...Array(6)].map((_, index) => (
@@ -89,7 +89,6 @@ export default function Page() {
                 <Skeleton className="w-10 h-10 mr-2 rounded-full" />
                 <div>
                   <Skeleton className="w-40 h-5 mb-2" />
-
                   <Skeleton className="w-60 h-4" />
                 </div>
               </div>
@@ -101,7 +100,7 @@ export default function Page() {
             const user = users[note.id % users.length];
             const createdAt = new Date(note.created_at).toLocaleString();
             return (
-              <div key={note.id} className="py-5 flex">
+              <div key={note.id} className="flex">
                 <Image
                   src={user.avatar}
                   alt="Avatar"

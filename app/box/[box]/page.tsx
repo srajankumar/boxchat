@@ -1,6 +1,5 @@
 "use client";
 
-// import Navbar from "@/components/Navbar";
 import NewNoteBox from "@/components/NewNoteBox";
 import { createClient } from "@/utils/supabase/client";
 import Image from "next/image";
@@ -68,8 +67,6 @@ export default function Box({ params }: { params: { box: string } }) {
         await supabase.from("box").delete().eq("id", row.id); // assuming 'id' is the primary key column
       }
 
-      // console.log(`All data cleared from table`);
-
       window.location.href = "/";
     } catch (error) {
       console.error("Error clearing table data:", error);
@@ -113,7 +110,7 @@ export default function Box({ params }: { params: { box: string } }) {
   ];
 
   return (
-    <div className="min-h-[100dvh] pt-20 md:pb-28">
+    <div className="min-h-[100dvh] pt-20 md:pb-28 pb-24">
       <div>
         <NewNoteBox />
         <div className="fixed py-5 bg-background border-b top-0 justify-center items-center w-full">
@@ -136,7 +133,7 @@ export default function Box({ params }: { params: { box: string } }) {
                   </AlertDialogHeader>
                   {`Are you sure you want to delete the Box "${params.box}"? This
                   action cannot be undone.`}
-                  <AlertDialogFooter>
+                  <AlertDialogFooter className="flex flex-col">
                     <AlertDialogAction
                       className="bg-destructive hover:bg-destructive/90"
                       onClick={clearTableData}
@@ -159,7 +156,7 @@ export default function Box({ params }: { params: { box: string } }) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2 max-w-3xl mx-auto px-5 w-full">
+      <div className="flex flex-col gap-8 py-6 max-w-3xl mx-auto px-5 w-full">
         {loading ? (
           <div>
             {[...Array(6)].map((_, index) => (
@@ -177,7 +174,7 @@ export default function Box({ params }: { params: { box: string } }) {
             const user = users[note.id % users.length];
             const createdAt = new Date(note.created_at).toLocaleString();
             return (
-              <div key={note.id} className="py-5 flex">
+              <div key={note.id} className="flex">
                 <Image
                   src={user.avatar}
                   alt="Avatar"
