@@ -76,7 +76,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="min-h-[100dvh] pt-20 pb-28">
+    <div className="min-h-[100dvh] pt-20 md:pb-28">
       <div>
         <NewNote />
         <Navbar />
