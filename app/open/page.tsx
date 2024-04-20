@@ -17,7 +17,7 @@ export default function Page() {
       const { data } = await supabase
         .from("notes")
         .select("*")
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: true });
       setNotes(data);
       setLoading(false);
     };
