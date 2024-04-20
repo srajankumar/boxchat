@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  client:
+    build: client
+    env_file:
+      - client/.env.local
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000

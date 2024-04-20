@@ -16,6 +16,16 @@ Box Chat is an open-source, anonymous chat app built using Supabase Realtime and
 - **Real-time Messaging**: Send and receive messages in real-time using Supabase Realtime.
 - **Next.js Frontend**: Built with Next.js for a seamless and fast user experience.
 
+## Installation
+
+```bash
+  docker compose build
+```
+
+```bash
+  docker compose up
+```
+
 ## Tech Stack
 
 ![Supabase](https://img.shields.io/badge/Supabase-%234ea94b.svg?style=for-the-badge&logo=supabase&logoColor=white)

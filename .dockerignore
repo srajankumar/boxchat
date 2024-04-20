@@ -1,6 +1,7 @@
 node_modules
 .next
 README.md
+LICENSE
 .gitignore
 Dockerfile
 .dockerignore
