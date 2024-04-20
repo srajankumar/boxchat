@@ -15,8 +15,8 @@ export default function Home() {
         </p>
       </div>
       <div className="w-full md:grid-cols-2 max-w-md grid gap-3 px-5">
-        <Link href="/global">
-          <Button className="w-full">Join Global Box</Button>
+        <Link href="/open">
+          <Button className="w-full">Join Open Box</Button>
         </Link>
         <Button>Create a Box</Button>
       </div>
