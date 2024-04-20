@@ -1,12 +1,14 @@
-# **Box Chat**
+<div align="center">
+  <img src="/public/og.png" alt="banner-image"/>
+</div>
 
-**Chat Anonymously Inside the Box**
-
-## **About**
+## About
 
 Box Chat is an open-source, anonymous chat app built using Supabase Realtime and Next.js. This app creates a safe space for friends to discuss misunderstandings, give compliments, or share thoughts and feelings without fear of judgment. Users can also connect with global peers anonymously, fostering a sense of community and understanding.
 
-## **Features**
+### Demo Video - [drive link](https://drive.google.com/file/d/1YNo2Ma8uMv_UM2815tFqHusvZoG1MrBQ/view?usp=sharing)
+
+## Features
 
 - **Anonymous Chat**: Share your thoughts and feelings without revealing your identity.
 - **Private Boxes**: Create a private chat room for you and your friends to discuss sensitive topics.
@@ -25,15 +27,18 @@ Box Chat is an open-source, anonymous chat app built using Supabase Realtime and
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-## **Authors**
+## Authors
 
 <a href="https://github.com/srajankumar/boxchat/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=srajankumar/boxchat" />
 </a>
 
-## **References**
+## References
 
 - [Next.js](https://nextjs.org/docs) for providing a fast and scalable frontend framework.
 - [Supabase](https://supabase.com/docs/guides/realtime) as a database and realtime.
 - [Notion Avatar Maker](https://notion-avatar.vercel.app/) for avatars.
+- [Lucide Icons](https://lucide.dev/) for icons.
 - [Viking Name Generator](https://asgardalaska.org/viking-name-generator/) for random names.
+
+**P.S. Built this in a weekend :)**
