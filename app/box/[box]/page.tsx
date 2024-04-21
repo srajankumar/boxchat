@@ -119,7 +119,7 @@ export default function Box({ params }: { params: { box: string } }) {
       <div>
         <NewNoteBox />
         <div className="fixed py-5 bg-background border-b top-0 justify-center items-center w-full">
-          <div className="flex gap-3 justify-between max-w-3xl mx-auto px-5 w-full">
+          <div className="flex gap-3 justify-between max-w-5xl mx-auto px-5 w-full">
             <Link
               href="/"
               className="flex hover:cursor-pointer group justify-center items-center gap-2"

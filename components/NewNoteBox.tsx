@@ -23,7 +23,7 @@ export default function NewNoteBox() {
     <div className="fixed border-t bg-background md:pb-10 bottom-0 py-5 left-0 right-0">
       <form
         onSubmit={handleSubmit}
-        className="flex gap-3 max-w-3xl mx-auto px-5 w-full"
+        className="flex gap-3 max-w-5xl mx-auto px-5 w-full"
       >
         <Input
           name="title"
