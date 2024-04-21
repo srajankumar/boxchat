@@ -118,7 +118,7 @@ export default function Box({ params }: { params: { box: string } }) {
     <div className="min-h-[100dvh] pt-20 md:pb-28 pb-24">
       <div>
         <NewNoteBox />
-        <div className="fixed py-5 bg-background border-b top-0 justify-center items-center w-full">
+        <div className="fixed py-5 bg-background border-b top-0 justify-center items-center w-full z-50">
           <div className="flex gap-3 justify-between max-w-5xl mx-auto px-5 w-full">
             <Link
               href="/"
